@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui">
+        <title>Tela de Cadastro de usuários</title>         
+    <body>                 
+                <p:outputLabel for="nome" value="Nome:" />
+                <p:inputText id="Nome" value="#{UsuarioDao.usuario.Nome}" />
+                   
+                <p:outputLabel for="Email" value="Email:" />
+                <p:inputText id="Email" value="#{UsuarioDao.usuario.Email}" />
+                 
+                <p:outputLabel for="Senha" value="Senha:" />
+                <p:inputTextarea id="Senha" value="#{UsuarioDao.usuario.Senha}" />
+  
+                <p:commandButton  value="Cadastrar" icon="ui-icon-star"
+                 action="#{UsuarioDao.inserir}" update="messages">
+                </p:commandButton>
+                
+                <p:commandButton  value="Alterar" icon="ui-icon-star"
+                 action="#{UsuarioDao.atualizar}" update="messages">
+                </p:commandButton>
+                
+                 <p:commandButton  value="Excluir" icon="ui-icon-star"
+                 action="#{UsuarioDao.excluir}" update="messages">
+                </p:commandButton>
+                
+                 <p:commandButton  value="Consultar Usuários" icon="ui-icon-star"
+                 action="#{UsuarioDao.selecionar}" update="messages">
+                </p:commandButton>
+  
+          </p:panelGrid>
+    </body>
+</html>
